@@ -17,30 +17,28 @@ public class AppointmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.appointment_activity);
 
-        // Inicializando as views
+        // Inicializando os itens na tela
         customerNameEditText = findViewById(R.id.customerNameEditText);
         dateEditText = findViewById(R.id.dateEditText);
         timeEditText = findViewById(R.id.timeEditText);
 
-        // Configurando o botão de agendar horário
+        // Configuração do botão para agendar um horário
         Button scheduleAppointmentButton = findViewById(R.id.scheduleAppointmentButton);
         scheduleAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Obter os valores digitados pelo usuário
+                // Variaveis para obter os valores digitados pelo usuário
                 String customerName = customerNameEditText.getText().toString().trim();
                 String date = dateEditText.getText().toString().trim();
                 String time = timeEditText.getText().toString().trim();
 
-                // Validar se os campos estão preenchidos
+                // Verifica se os campos estão preenchidos
                 if (customerName.isEmpty() || date.isEmpty() || time.isEmpty()) {
                     Toast.makeText(AppointmentActivity.this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Aqui você pode adicionar lógica para salvar o agendamento em algum lugar, como um banco de dados ou serviço web
-                    // Por enquanto, vamos apenas exibir uma mensagem de confirmação
                     String confirmationMessage = "Agendamento confirmado para " + customerName + " no dia " + date + " às " + time;
                     Toast.makeText(AppointmentActivity.this, confirmationMessage, Toast.LENGTH_SHORT).show();
-                    finish(); // Fechar a atividade após o agendamento
+                    finish();
                 }
             }
         });

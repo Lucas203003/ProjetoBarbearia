@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="Main">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/barbershopName"
@@ -15,7 +15,6 @@
         android:textStyle="bold" />
 
 
-    <!-- Aqui você pode adicionar mais elementos para exibir informações sobre a barbearia -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
