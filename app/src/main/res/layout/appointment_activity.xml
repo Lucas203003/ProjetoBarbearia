@@ -26,14 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Data (DD/MM/AAAA)"
-        android:inputType="text"/>
+        android:inputType="date"/>
 
     <EditText
         android:id="@+id/timeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Horário (HH:MM)"
-        android:inputType="text"/>
+        android:inputType="time" />
 
     <Button
         android:id="@+id/scheduleAppointmentButton"
