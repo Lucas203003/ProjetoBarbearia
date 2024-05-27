@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                                startActivity(new Intent(MainActivity.this, AppointmentActivity.class));
+                                Intent intent = new Intent(MainActivity.this, AppointmentActivity.class);
+                                startActivity(intent);
                         }
                 });
         }
